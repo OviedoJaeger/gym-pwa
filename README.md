@@ -1,66 +1,201 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Gym PWA — Aplicación para Clientes del Gimnasio 🏋️
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicación web progresiva desarrollada como complemento de **GymApp**, el sistema administrativo de gestión para gimnasio.
 
-## About Laravel
+Mientras GymApp concentra las operaciones administrativas del negocio, **Gym PWA fue diseñada para proporcionar a los clientes acceso a información relacionada con su cuenta, membresía y actividad dentro del gimnasio**, separando la experiencia del usuario final del panel utilizado por el personal administrativo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El proyecto fue desarrollado con **Laravel, PHP, JavaScript y tecnologías web**, siguiendo un enfoque responsive orientado principalmente a dispositivos móviles.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> **Estado del proyecto:** Proyecto funcional desarrollado como extensión de GymApp. Su arquitectura fue planteada con posibilidad de incorporar nuevas funcionalidades orientadas al cliente.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🎯 Objetivo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+GymApp fue diseñado principalmente para el personal encargado de la administración del gimnasio.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Sin embargo, parte de la información generada por ese sistema también resulta útil para los socios.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Gym PWA surge como una aplicación complementaria con el objetivo de proporcionar al cliente una interfaz independiente desde la cual consultar información relacionada con su cuenta y actividad.
 
-## Laravel Sponsors
+```text
+┌─────────────────────┐
+│       GymApp        │
+│                     │
+│ Sistema             │
+│ administrativo      │
+└──────────┬──────────┘
+           │
+           │ Información
+           ▼
+┌─────────────────────┐
+│      Gym PWA        │
+│                     │
+│ Aplicación para     │
+│ clientes            │
+└─────────────────────┘
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## 📱 Funcionalidades
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+La aplicación permite presentar al usuario información proveniente del ecosistema administrativo del gimnasio.
 
-## Contributing
+Entre las funciones contempladas se encuentran:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Inicio de sesión del cliente.
+* Consulta de información personal.
+* Consulta del estado de la membresía.
+* Visualización de información relacionada con el paquete contratado.
+* Consulta de asistencias.
+* Acceso a información generada desde el sistema administrativo.
+* Visualización de contenido y anuncios dirigidos a clientes.
 
-## Code of Conduct
+La aplicación fue planteada de manera que nuevas funciones pudieran incorporarse posteriormente sin integrarlas directamente en el panel administrativo.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🔗 Integración con GymApp
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Gym PWA forma parte de un proyecto compuesto por dos aplicaciones con diferentes tipos de usuario:
 
-## License
+### GymApp
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Sistema utilizado por el personal del gimnasio para administrar:
+
+* Socios.
+* Membresías.
+* Asistencias.
+* Ventas.
+* Inventario.
+* Adeudos.
+* Gastos.
+* Reportes.
+* Usuarios.
+* Contenido para clientes.
+
+### Gym PWA
+
+Aplicación orientada al socio para consultar la información que le corresponde desde una interfaz independiente y optimizada para dispositivos móviles.
+
+Esta separación permite mantener las funciones administrativas fuera de la aplicación del cliente y facilita ampliar ambos sistemas de manera independiente.
+
+---
+
+## 🔄 Flujo general de información
+
+```text
+           PERSONAL DEL GIMNASIO
+                    │
+                    ▼
+          ┌───────────────────┐
+          │      GymApp       │
+          │                   │
+          │ Administración   │
+          └─────────┬─────────┘
+                    │
+                    ▼
+          ┌───────────────────┐
+          │     Datos del     │
+          │      sistema      │
+          └─────────┬─────────┘
+                    │
+              Sincronización
+                    │
+                    ▼
+          ┌───────────────────┐
+          │      Gym PWA      │
+          │                   │
+          │ Experiencia del   │
+          │ cliente           │
+          └─────────┬─────────┘
+                    │
+                    ▼
+                 SOCIO
+```
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+### Backend
+
+* PHP
+* Laravel
+* Arquitectura MVC
+* Autenticación
+* Manejo de sesiones
+* Acceso a datos
+
+### Frontend
+
+* Blade
+* HTML
+* CSS
+* JavaScript
+* Diseño responsive
+
+### Datos
+
+* MySQL
+* Integración con información generada por GymApp
+* Sincronización de datos entre entornos
+
+### Herramientas
+
+* Git
+* GitHub
+* Composer
+* NPM / Vite
+
+---
+
+## 💡 Diseño orientado a escalabilidad
+
+Uno de los objetivos de separar Gym PWA del sistema administrativo fue permitir que la experiencia del cliente pudiera evolucionar independientemente.
+
+La arquitectura permite plantear futuras funcionalidades como:
+
+* Historial detallado de asistencias.
+* Notificaciones sobre vencimiento de membresía.
+* Renovación o pago de membresías.
+* Rutinas de entrenamiento.
+* Seguimiento de progreso.
+* Reservas de clases o servicios.
+* Promociones personalizadas.
+* Notificaciones del gimnasio.
+
+Estas funcionalidades representan posibilidades de evolución del sistema y no necesariamente forman parte de la versión actualmente implementada.
+
+---
+
+## 📷 Capturas
+
+> Agregar capturas de la aplicación ejecutándose en dispositivos móviles.
+
+---
+
+## 📚 Contexto del proyecto
+
+Gym PWA fue desarrollada como parte del mismo ecosistema que **GymApp**, un sistema administrativo para la operación de un gimnasio.
+
+El proyecto permitió explorar la separación entre una aplicación administrativa y una aplicación destinada al usuario final, además del intercambio y sincronización de información entre diferentes componentes de un mismo sistema.
+
+El repositorio se conserva como evidencia del desarrollo realizado y de los conocimientos adquiridos durante el proyecto.
+
+---
+
+## 🔗 Proyecto relacionado
+
+**GymApp — Sistema administrativo para gimnasio**
+
+Repositorio principal del sistema encargado de gestionar socios, membresías, asistencias, ventas, inventario, reportes y otras operaciones administrativas.
+
+---
+
+## 📄 Estado
+
+Proyecto concluido y actualmente archivado.
+
+El código representa las tecnologías, arquitectura y decisiones técnicas utilizadas durante su periodo original de desarrollo.
